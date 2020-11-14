@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <h1>Psikoloji</h1>
+        </div>
+        <div class="header-menu">
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="#">Anasayfa</a>
+                        <i class="fas fa-home"></i>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Blog</a>
+                        <i class="fas fa-bullhorn"></i>
+                    </li>
+                    
+                    <li>
+                        <a href="#">Hakkımızda</a>
+                        <i class="fas fa-book"></i>
+                    </li>
+                    
+                    <li>
+                        <a href="#">İletişim</a>
+                        <i class="fas fa-phone"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <div class="rellax bubble1"></div>
+        <div class="rellax bubble2"></div>
+        <div class="rellax bubble3"></div>
+        <div class="rellax bubble4"></div>
+        <div class="rellax bubble5"></div>
+        <div class="bubble6"></div>
+        <div class="rellax bubble7"></div>
+        <div class="rellax texts">
+            <h1>Özel olarak oluşturulmuş chat uygulamamızla psikolog öğrencilerimizle iltişime geçin!</h1>
+            <h4>web sitemizdeki chat özelliği ile birlikte hasta doktor ilişkisini koruyarak son sınıf psikoloji öğrencilerimiz tarafından verilen terapilere ücretsiz bir şekilde ulaşabilirsiniz. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium nulla provident eius earum! Exercitationem doloremque, officiis e, eum?  </h4>
+        </div>
+    </div>
+    <div class="giris">
+        <ul>
+            <li>
+                <a href="#">Giriş Yap</a>
+            </li>
+            <li>
+                <a href="#">Kayıt Ol</a>
+            </li>
+        </ul>
+    </div>
+    <div class="about">
+        <div class="about-left">
+            <div class="rellax about1">
+                <i class="fas fa-comments"></i>
+                <div class="chat-texts">
+                    <h4>Chat sistemi</h4>
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ratione tempora dolor unde nobis. Eaque maiores, corrupti sapiente exercitationem in eveniet numquam, quis porro sequi amet molestiae sint dicta velit.</h2>
+                </div>
+            </div>
+            <div class="rellax about2">
+                <i class="far fa-thumbs-up"></i>
+                <div class="puanlama-texts">
+                    <h4>Puanlama sistemi</h4>
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ratione tempora dolor unde nobis. Eaque maiores, corrupti sapiente exercitationem in eveniet numquam, quis porro sequi amet molestiae sint dicta velit.</h2>
+                </div>
+            </div>
+        </div>
+        <div class="about-right">
+            <div class="rellax about3">
+                <i class="fas fa-ban"></i>
+                <div class="banlama-texts">
+                    <h4>Banlama sistemi</h4>
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ratione tempora dolor unde nobis. Eaque maiores, corrupti sapiente exercitationem in eveniet numquam, quis porro sequi amet molestiae sint dicta velit.</h2>
+                </div>
+            </div>
+            <div class="rellax about4">
+                <i class="fas fa-share-square"></i>
+                <div class="yardım-texts">
+                    <h4>Alt sınıflara yardım!</h4>
+                    <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut ratione tempora dolor unde nobis. Eaque maiores, corrupti sapiente exercitationem in eveniet numquam, quis porro sequi amet molestiae sint dicta velit.</h2>
+                </div>
+             </div>
+        </div>
+    </div>
+    <div class="uzama"></div>
+    <!--SCRİPT-->
+    <script src="rellax.min.js"></script>
+    <script type="text/javascript">
+        var rellax = new Rellax('.rellax');
+    </script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+
+        $(function(){
+
+            var scroll = $(document).scrollTop();
+            var navHeight = $('.header').outerHeight();
+
+            $(window).scroll(function(){
+                var scrolled = $(document).scrollTop();
+
+                if(scrolled > navHeight) {
+                    $('.header').addClass('animate');
+                }else{
+                    $('.header').removeClass('animate');
+                }
+
+                if(scrolled > scroll){
+                    $('.header').removeClass('sticky');
+                }else{
+                    $('.header').addClass('sticky');
+                }
+
+                scroll = $(document).scrollTop();
+            });
+
+        });
+
+
+
+    </script>
+</body>
+</html>
